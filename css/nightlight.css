@@ -1,6 +1,15 @@
-.fixed{
-    position: fixed;
-}
-.scrollOffset{
-    top: 60px;
-} 
+
+  .left-panel {
+    position: sticky;
+    height: 100vh;
+    top: 0;
+  }
+  .right-panel {
+    height: 1000rem;
+    width: 50%;
+    background-color: blue;
+  }
+  .navPadding{
+    padding-left: 20px;
+    padding-top: 10px;
+  }
