@@ -1,5 +1,6 @@
 
 $(loadDoc('projects/main.html',ChMainBody));
+// $(loadDoc('projects/nightTest.html', nightlightpage));
 
 function loadDoc(url, cFunction) {
     var xhttp;
@@ -13,7 +14,12 @@ function loadDoc(url, cFunction) {
     xhttp.send();
   }
   function ChMainBody(xhttp) {
-    document.getElementById("demo").innerHTML =
+    document.getElementById("content").innerHTML =
+    xhttp.responseText;
+  }
+
+  function nightlightpage(xhttp) {
+    document.getElementById("nightlightpg").innerHTML =
     xhttp.responseText;
   }
 
@@ -28,7 +34,7 @@ function loadDoc(url, cFunction) {
 $(function () {
     $("#nightLight").click(function () {
         loadDoc('projects/nightTest.html', ChMainBody);
-        ChangeUrl('Page1', 'NightLight.htm');
+        ChangeUrl('Page1', 'projects/NightLight.html');
     });
     $("#button2").click(function () {
         ChangeUrl('Page2', 'Page2.htm');
